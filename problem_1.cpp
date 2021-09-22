@@ -5,6 +5,7 @@ int KnapScak(int *wt, int *qt, int max_wt, int size)
     if(size==0 || max_wt==0) return 0;
     if(wt[size-1] <max_wt) return max(wt[size-1]+ KnapScak(wt, qt, max_wt-wt[size-1], size-1), KnapScak(wt, qt, max_wt, size-1));
     else if(wt[size-1]>max_wt) return KnapScak(wt, qt, max_wt, size-1);
+    return 0;
 }
 int main()
 {
