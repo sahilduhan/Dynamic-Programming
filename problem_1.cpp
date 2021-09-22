@@ -9,11 +9,11 @@ int KnapScak(int *wt, int *qt, int max_wt, int size)
 }
 int main()
 {
-int val[]={1,3,4,5};
-int qt[]={1,4,5,7};
-int size= sizeof(val)/sizeof(val[0]);
-int max_wt= 10;
-KnapScak(val, qt, max_wt, size);
+    int val[]={1,3,4,5};
+    int qt[]={1,4,5,7};
+    int size= sizeof(val)/sizeof(val[0]);
+    int max_wt= 10;
+    KnapScak(val, qt, max_wt, size);
 
     return 0;
 }
