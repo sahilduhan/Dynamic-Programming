@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-int subSetSum(vector<int> arr, int target)
+bool subSetSum(vector<int> arr, int target)
 {   
-    int finalAns=0;
-    bool t[arr.size()+1][target+1];
+    int finalAns=0, size=0;
+    bool t[size+1][target+1];
     for(int i=0; i<arr.size(); i++)
     {
         for(int j=0; j<arr.size(); j++)
@@ -12,9 +12,9 @@ int subSetSum(vector<int> arr, int target)
             if(j==0) t[i][j]=false;
         }
     }
-
-
-   
+    if(arr[size-1]<target) t[size][target]=t[size][target-arr[size-1]] || t[size-1][target];
+    else t[size][target]= t[size-1][target];
+    
     return finalAns;
 }
 int main()
